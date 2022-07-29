@@ -21,7 +21,7 @@ const desktopRoutes: Routes = [
       },
       {
         path: 'home',
-        component: HomePageComponent
+        loadChildren: () => import('./home/home.module').then(module => module.HomeModule)
       }
     ]
   },
