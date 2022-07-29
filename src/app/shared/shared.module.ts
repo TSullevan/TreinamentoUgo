@@ -8,6 +8,9 @@ import { MasterPageComponent } from './pages/master-page/master-page.component';
 import { FormComponent } from './components/form/form.component';
 import { InputComponent } from './components/input/input.component';
 import { FormsModule } from '@angular/forms';
+import { FirstLetterPipe } from './pipes/first-letter.pipe';
+import { PascalCasePipe } from './pipes/pascal-case.pipe';
+import { HttpService } from './services/http.service';
 
 
 @NgModule({
@@ -16,7 +19,9 @@ import { FormsModule } from '@angular/forms';
     NotFoundPageComponent,
     MasterPageComponent,
     FormComponent,
-    InputComponent
+    InputComponent,
+    FirstLetterPipe,
+    PascalCasePipe
   ],
   imports: [
     CommonModule,
@@ -26,7 +31,12 @@ import { FormsModule } from '@angular/forms';
   exports: [
     NavbarComponent,
     InputComponent,
-    FormComponent
+    FormComponent,
+    FirstLetterPipe,
+    PascalCasePipe
+  ],
+  providers: [ 
+    HttpService
   ]
 })
 export class SharedModule { }

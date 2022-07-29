@@ -1,1 +1,14 @@
 <p>home-page works!</p>
+
+<input [(ngModel)]="myText">
+
+{{ myText | firstLetter | pascalCase }}
+
+<button (click)="get()">Get</button>
+
+<div *ngFor="let wheatherForecast of weatherForecasts">
+    <span>{{wheatherForecast.date}}</span><br>
+    <span>{{wheatherForecast.temperatureC}}</span><br>
+    <span>{{wheatherForecast.temperatureF}}</span><br>
+    <span>{{wheatherForecast.summary}}</span><br>
+</div>
