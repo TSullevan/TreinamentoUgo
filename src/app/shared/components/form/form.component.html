@@ -1,3 +1,4 @@
 <p>form works!</p>
-
-<app-input *ngFor="let input of model.inputs" [model]="input"></app-input>
+<div class="row" *ngFor="let row of model.rows">
+    <app-input class="col" *ngFor="let col of row.cols" [model]="col.input"></app-input>
+</div>

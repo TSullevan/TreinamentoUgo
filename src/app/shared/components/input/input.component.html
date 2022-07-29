@@ -1,2 +1,4 @@
-<label *ngIf="model.title">{{ model.title }}</label> <span *ngIf="model.required">*</span>
-<input [placeholder]="model.placeHolder">
+<label *ngIf="model.title">{{ model.title }}</label>
+<span *ngIf="model.required" style="color:red">*</span>
+<input [(ngModel)]="model.value" [placeholder]="model.placeHolder" (keyup)="model.mask()">
+{{model.value}}
